@@ -3,7 +3,7 @@ import { useFetchApi } from "../api/useFetchApi";
 import { useArchitectureValidation, useEditArchitectureValidation } from "./useArchitecture.validation";
 import type { FetchCustomConfig } from "../api/FetchCustomConfig";
 import { serialize } from "object-to-formdata";
-import { ArchitectureBaseDto, ArchitectureDto, ArchitectureTreeStructDto } from "./architecture.dto";
+// import { ArchitectureBaseDto, ArchitectureDto, ArchitectureTreeStructDto } from "./architecture.dto";
 
 export const useCreateArchitectureService = () => {
   const fetchData = useFetchApi();
