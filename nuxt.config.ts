@@ -43,6 +43,9 @@ export default defineNuxtConfig({
           experimentalDecorators: true
         }
       }
-    }
+    },
+    optimizeDeps: {
+      include: ['reflect-metadata'],
+    },
   }
 });
