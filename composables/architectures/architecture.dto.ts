@@ -8,7 +8,7 @@ export class ArchitectureBaseDto {
   id: number;
   @Expose()
   title: string;
-  @Expose()
+  @Expose({toClassOnly: true})
   get displayTitle(){
     if (this.type === "assistance") {
       return "معاونت " + this.title;
