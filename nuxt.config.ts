@@ -3,7 +3,8 @@ import 'reflect-metadata';
 import { PROXY_CONFIG } from "./composables/api/api.config";
 import visualizer from 'rollup-plugin-visualizer';
 import typescript from "@rollup/plugin-typescript";
-import swc from "rollup-plugin-swc";
+// import swc from "rollup-plugin-swc";
+import swc from "vite-plugin-swc-transform";
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
@@ -37,7 +38,18 @@ export default defineNuxtConfig({
       }
     },
     plugins: [
-      swc(),
+      swc({
+        swcOptions: {
+          jsc: {
+            target: "ES2021",
+            transform: {
+              legacyDecorator: true,
+              decoratorMetadata: true,
+            },
+            // externalHelpers: true,
+          },
+        },
+      }),
   ],
   // esbuild: false,
     optimizeDeps: {
