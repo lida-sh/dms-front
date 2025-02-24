@@ -12,6 +12,9 @@
   "overrides": {
     "vue": "latest"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@alireza-ab/vue3-persian-datepicker": "^1.0.5",
     "@heroicons/vue": "^1.0.6",

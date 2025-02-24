@@ -7,5 +7,5 @@
   </div>
 </template>
 <script setup lang="ts">
-console.log(`Node.js version: ${process.version}`);
+
 </script>
