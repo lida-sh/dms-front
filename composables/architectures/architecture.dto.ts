@@ -1,7 +1,7 @@
 import { Expose, Type } from "class-transformer";
 import "reflect-metadata";
 import { FileDto,} from "../file.dto";
-import type { InferType } from "yup"
+
 import { ProcessTreeStructDto } from "../processes/process.dto";
 export class ArchitectureBaseDto {
   @Expose()
