@@ -29,6 +29,7 @@
     "object-to-formdata": "^4.5.1",
     "ohmyfetch": "^0.4.21",
     "reflect-metadata": "^0.1.14",
+    "rollup-plugin-visualizer": "^5.14.0",
     "six-dropzone": "^0.3.4",
     "vee-validate": "^4.13.2",
     "vue": "latest",
