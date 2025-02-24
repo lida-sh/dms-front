@@ -2,6 +2,8 @@
 import 'reflect-metadata';
 import { PROXY_CONFIG } from "./composables/api/api.config";
 import visualizer from 'rollup-plugin-visualizer';
+import typescript from "@rollup/plugin-typescript";
+import swc from "rollup-plugin-swc";
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
@@ -27,13 +29,30 @@ export default defineNuxtConfig({
     devProxy: PROXY_CONFIG,
   },
   vite: {
-    esbuild: {
-      tsconfigRaw: {
-        compilerOptions: {
-          experimentalDecorators: true
-        }
-      }
-    },
+    // esbuild: {
+    //   tsconfigRaw: {
+    //     compilerOptions: {
+    //       experimentalDecorators: true
+    //     }
+    //   }
+    // },
+    plugins: [
+      swc({
+          jsc: {
+              parser: {
+                  syntax: "typescript",
+                  // tsx: true, // If you use react
+                  dynamicImport: true,
+                  decorators: true,
+              },
+              target: "es2021",
+              transform: {
+                  decoratorMetadata: true,
+              },
+          },
+      }),
+  ],
+  esbuild: false,
     optimizeDeps: {
       include: ['reflect-metadata'],
     },
