@@ -31,7 +31,7 @@
     "nuxt": "^3.15.4",
     "object-to-formdata": "^4.5.1",
     "ohmyfetch": "^0.4.21",
-    "reflect-metadata": "^0.1.14",
+    "reflect-metadata": "^0.2.2",
     "rollup-plugin-swc": "^0.2.1",
     "rollup-plugin-visualizer": "^5.14.0",
     "six-dropzone": "^0.3.4",
