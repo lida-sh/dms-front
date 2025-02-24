@@ -20,6 +20,7 @@
     "@heroicons/vue": "^1.0.6",
     "@nuxt/kit": "^3.0.0",
     "@pinia/nuxt": "latest",
+    "@types/reflect-metadata": "^0.0.5",
     "class-transformer": "^0.5.1",
     "date-fns-jalali": "^4.1.0-0",
     "dropzone": "^6.0.0-beta.2",
