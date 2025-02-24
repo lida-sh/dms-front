@@ -29,13 +29,13 @@ export default defineNuxtConfig({
     devProxy: PROXY_CONFIG,
   },
   vite: {
-    // esbuild: {
-    //   tsconfigRaw: {
-    //     compilerOptions: {
-    //       experimentalDecorators: true
-    //     }
-    //   }
-    // },
+    esbuild: {
+      tsconfigRaw: {
+        compilerOptions: {
+          experimentalDecorators: true
+        }
+      }
+    },
     plugins: [
       swc({
           jsc: {
@@ -52,7 +52,7 @@ export default defineNuxtConfig({
           },
       }),
   ],
-  esbuild: false,
+  // esbuild: false,
     optimizeDeps: {
       include: ['reflect-metadata'],
     },

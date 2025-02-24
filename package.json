@@ -21,6 +21,7 @@
     "@nuxt/kit": "^3.0.0",
     "@pinia/nuxt": "latest",
     "@rollup/plugin-typescript": "^12.1.2",
+    "@swc/core": "^1.10.18",
     "@types/reflect-metadata": "^0.0.5",
     "class-transformer": "^0.5.1",
     "date-fns-jalali": "^4.1.0-0",
