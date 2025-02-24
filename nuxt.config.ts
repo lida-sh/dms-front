@@ -53,5 +53,5 @@ export default defineNuxtConfig({
     visualizer({
       open: true,
     }) as any, // استفاده از `as any` برای جلوگیری از خطاهای TypeScript
-  ]
+  ],}
 });
