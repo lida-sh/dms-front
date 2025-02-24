@@ -49,3 +49,4 @@ export default defineNuxtConfig({
     },
   }
 });
+console.log(`Node.js version: ${process.version}`);
