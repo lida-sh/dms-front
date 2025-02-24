@@ -1,7 +1,7 @@
-// import {
-//   ArchitectureBaseDto,
-//   ArchitectureClientBaseDto,
-// } from "../architectures/architecture.dto";
+import {
+  ArchitectureBaseDto,
+  ArchitectureClientBaseDto,
+} from "../architectures/architecture.dto";
 import { FileDto } from "../file.dto";
 import { Expose, Type } from "class-transformer";
 import {
@@ -35,8 +35,8 @@ export class SubProcessDto extends SubProcessBaseDto {
   @Expose()
   created_at: string;
   @Expose()
-  // @Type(() => ArchitectureBaseDto)
-  // architecture: ArchitectureBaseDto;
+  @Type(() => ArchitectureBaseDto)
+  architecture: ArchitectureBaseDto;
   @Expose()
   @Type(() => ProcessBaseDto)
   process: ProcessBaseDto;
@@ -53,8 +53,8 @@ export class SubProcessClientDto {
   @Expose()
   created_at: string;
   @Expose()
-  // @Type(() => ArchitectureClientBaseDto)
-  // architecture: ArchitectureClientBaseDto;
+  @Type(() => ArchitectureClientBaseDto)
+  architecture: ArchitectureClientBaseDto;
   @Expose()
   @Type(() => ProcessBaseClientDto)
   process: ProcessBaseClientDto;

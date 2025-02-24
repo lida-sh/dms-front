@@ -1,7 +1,7 @@
-// import {
-//   ArchitectureBaseDto,
-//   ArchitectureClientBaseDto,
-// } from "../architectures/architecture.dto";
+import {
+  ArchitectureBaseDto,
+  ArchitectureClientBaseDto,
+} from "../architectures/architecture.dto";
 import { FileDto } from "../file.dto";
 import { Expose, Transform, Type } from "class-transformer";
 import {
@@ -71,9 +71,9 @@ export class ProcedureClientDto {
     return String(value);
   }, {toClassOnly:true})
   notification_date:string;
-  // @Expose()
-  // @Type(() => ArchitectureClientBaseDto)
-  // architecture: ArchitectureClientBaseDto;
+  @Expose()
+  @Type(() => ArchitectureClientBaseDto)
+  architecture: ArchitectureClientBaseDto;
   @Expose()
   @Type(() => ProcessBaseClientDto)
   process: ProcessBaseClientDto;
@@ -100,9 +100,9 @@ export class ProcedureDto extends ProcedureBaseDto {
   description: string;
   @Expose()
   created_at: string;
-  // @Expose()
-  // @Type(() => ArchitectureBaseDto)
-  // architecture: ArchitectureBaseDto;
+  @Expose()
+  @Type(() => ArchitectureBaseDto)
+  architecture: ArchitectureBaseDto;
   @Expose()
   @Type(() => ProcessBaseDto)
   process: ProcessBaseDto;
