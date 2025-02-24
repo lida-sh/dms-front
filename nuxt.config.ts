@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import 'reflect-metadata';
 import { PROXY_CONFIG } from "./composables/api/api.config";
 
 export default defineNuxtConfig({
@@ -11,18 +12,18 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  typescript: {
-    tsConfig:{
-      "compilerOptions": {
-        "target": "ESNext",
-        "module": "ESNext",
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata":true,
-        "strictPropertyInitialization":false,
-        "noImplicitAny":false
-      }
-    }
-  },
+  // typescript: {
+  //   tsConfig:{
+  //     "compilerOptions": {
+  //       "target": "ESNext",
+  //       "module": "ESNext",
+  //       "experimentalDecorators": true,
+  //       "emitDecoratorMetadata":true,
+  //       "strictPropertyInitialization":false,
+  //       "noImplicitAny":false
+  //     }
+  //   }
+  // },
   modules: [
     "@vueuse/nuxt",
     "six-dropzone",
@@ -30,7 +31,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt"
   ],
   build: {
-    transpile: ["gsap"],
+    transpile: ["gsap", 'class-transformer'],
   },
   nitro: {
     devProxy: PROXY_CONFIG,
