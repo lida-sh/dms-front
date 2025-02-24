@@ -1,8 +1,8 @@
 import { ArchitectureBaseDto, ArchitectureClientBaseDto } from "../architectures/architecture.dto";
 import { FileDto,} from "../file.dto";
-import { Exclude, Expose, Transform, Type } from "class-transformer";
+import { Expose, Type } from "class-transformer";
 import { SubProcessTreeStructDto } from "../sub-processes/subProcess.dto";
-
+import "reflect-metadata";
 export class ProcessBaseDto {
   @Expose()
   id: number;

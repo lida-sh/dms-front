@@ -3,12 +3,12 @@ import {
   ArchitectureClientBaseDto,
 } from "../architectures/architecture.dto";
 import { FileDto } from "../file.dto";
-import { Exclude, Expose, Transform, Type } from "class-transformer";
+import { Expose, Type } from "class-transformer";
 import {
   ProcessBaseDto,
   ProcessBaseClientDto,
 } from "~/composables/processes/process.dto";
-
+import "reflect-metadata";
 export class SubProcessBaseDto {
   @Expose()
   id: number;

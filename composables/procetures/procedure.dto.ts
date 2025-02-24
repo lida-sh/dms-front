@@ -3,18 +3,18 @@ import {
   ArchitectureClientBaseDto,
 } from "../architectures/architecture.dto";
 import { FileDto } from "../file.dto";
-import { Exclude, Expose, Transform, Type } from "class-transformer";
+import { Expose, Transform, Type } from "class-transformer";
 import {
   ProcessBaseClientDto,
   ProcessBaseDto,
 } from "~/composables/processes/process.dto";
-
+import "reflect-metadata";
 export class ProcedureBaseDto {
   @Expose()
   id: number;
   @Expose()
   title: string;
-  @Expose()
+  @Expose({toClassOnly:true})
   get displayTitle() {
     if (this.docType === "procedures") {
       return "روش اجرایی " + this.title;
@@ -43,7 +43,7 @@ export class ProcedureClientDto {
   title: string;
   @Expose()
   slug: string;
-  @Expose()
+  @Expose({toClassOnly:true})
   get displayTitle() {
     if (this.docType === "procedures") {
       return "روش اجرایی " + this.title;
@@ -69,7 +69,7 @@ export class ProcedureClientDto {
   @Expose()
   @Transform(({ value }) => {
     return String(value);
-  })
+  }, {toClassOnly:true})
   notification_date:string;
   @Expose()
   @Type(() => ArchitectureClientBaseDto)
@@ -109,7 +109,7 @@ export class ProcedureDto extends ProcedureBaseDto {
   @Expose()
   @Transform(({ value }) => {
     return String(value);
-  })
+  },{toClassOnly:true})
   notification_date:string;
 }
 export class ProcedureDtoPagination {
