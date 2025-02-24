@@ -10,11 +10,11 @@ export class ArchitectureBaseDto {
   title: string;
   @Expose({toClassOnly: true})
   get displayTitle(){
-    if (this.type === "assistance") {
-      return "معاونت " + this.title;
-    } else if (this.type === "administration") {
+    // if (this.type === "assistance") {
+    //   return "معاونت " + this.title;
+    // } else if (this.type === "administration") {
       return "اداره کل " + this.title;
-    }
+    // }
   }
   set displayTitle(value){
 
@@ -29,11 +29,11 @@ export class ArchitectureClientBaseDto {
   title: string;
   @Expose({toClassOnly: true})
   get displayTitle(){
-    if (this.type === "assistance") {
-      return "معاونت " + this.title;
-    } else if (this.type === "administration") {
+    // if (this.type === "assistance") {
+    //   return "معاونت " + this.title;
+    // } else if (this.type === "administration") {
       return "اداره کل " + this.title;
-    }
+    // }
   }
   set displayTitle(value){
 
