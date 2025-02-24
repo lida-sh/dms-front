@@ -37,20 +37,7 @@ export default defineNuxtConfig({
       }
     },
     plugins: [
-      swc({
-          jsc: {
-              parser: {
-                  syntax: "typescript",
-                  // tsx: true, // If you use react
-                  dynamicImport: true,
-                  decorators: true,
-              },
-              target: "es2021",
-              transform: {
-                  decoratorMetadata: true,
-              },
-          },
-      }),
+      swc(),
   ],
   // esbuild: false,
     optimizeDeps: {
