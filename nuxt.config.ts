@@ -46,12 +46,8 @@ export default defineNuxtConfig({
             }
           },
         },
-      }
+      },
       
   },
-  plugins: [
-    visualizer({
-      open: true,
-    }) as any, // استفاده از `as any` برای جلوگیری از خطاهای TypeScript
-  ],}
+  }
 });
