@@ -30,28 +30,28 @@ export default defineNuxtConfig({
     devProxy: PROXY_CONFIG,
   },
   vite: {
-    // esbuild: {
-    //   tsconfigRaw: {
-    //     compilerOptions: {
-    //       experimentalDecorators: true
-    //     }
-    //   }
-    // },
+    esbuild: {
+      tsconfigRaw: {
+        compilerOptions: {
+          experimentalDecorators: true
+        }
+      }
+    },
     plugins: [
-      swc({
-        swcOptions: {
-          jsc: {
-            target: "ES2021",
-            transform: {
-              legacyDecorator: true,
-              decoratorMetadata: true,
-            },
-            // externalHelpers: true,
-          },
-        },
-      }),
+      // swc({
+      //   swcOptions: {
+      //     jsc: {
+      //       target: "es2021",
+      //       transform: {
+      //         legacyDecorator: true,
+      //         decoratorMetadata: true,
+      //       },
+      //       // externalHelpers: true,
+      //     },
+      //   },
+      // }),
   ],
-  esbuild: false,
+  // esbuild: false,
     optimizeDeps: {
       include: ['reflect-metadata'],
     },
